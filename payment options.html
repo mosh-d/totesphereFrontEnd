@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Payment Options</title>
+
+        <link rel="stylesheet", href="./src/style.css"/>
+        
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="payment-container">
+            <h2>Choose Your Payment Option</h2>
+        
+            <!-- Card Payment Option -->
+            <div class="payment-method">
+                <input type="radio" id="card-payment" name="payment-method" value="card">
+                <label for="card-payment">Credit/Debit Card</label>
+        
+                <div id="card-details" class="payment-details">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-expiry">Expiry Date</label>
+                        <input type="text" id="card-expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvv">CVV</label>
+                        <input type="number" id="card-cvv" placeholder="123">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- PayPal Payment Option -->
+            <div class="payment-method">
+                <input type="radio" id="paypal" name="payment-method" value="paypal">
+                <label for="paypal">PayPal</label>
+        
+                <div id="paypal-details" class="payment-details">
+                    <p>You will be redirected to PayPal to complete your payment.</p>
+                </div>
+            </div>
+        
+            <!-- Bank Transfer Option -->
+            <div class="payment-method">
+                <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                <label for="bank-transfer">Bank Transfer</label>
+        
+                <div id="bank-details" class="payment-details">
+                    <p>Bank Account: 123-456-789<br>Sort Code: 00-00-00</p>
+                </div>
+            </div>
+        
+            <div class="button-container">
+                <button class="button active" type="submit">Proceed with Payment</button>
+            </div>
+        </div>
+
+        <script>
+           // Payment method toggling
+            const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+            const paymentDetails = document.querySelectorAll('.payment-details');
+
+            paymentMethods.forEach((method) => {
+                method.addEventListener('change', () => {
+                    //Hide all payment details
+                    paymentDetails.forEach((detail) => detail.classList.remove('active'));
+
+                    //Show selected payment method details
+                    const selectedMethod = method.value;
+                    document.getElementById(`${selectedMethod}-details`).classList.add('active');
+                });
+            });
+        </script>
+    </body>
+</html>

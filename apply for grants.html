@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Linking Swiper css for carousel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet", href="./src/style.css"/>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Apply for Grants</title>
+    </head>
+    <body>
+        <div class="apply-for-grants light">
+            <section class="grid-container">
+                <div class="item-1">
+                    <h2 class="light">
+                        Apply for our Grant!
+                    </h2>
+
+                    <p class="light">
+                        We're offering a limited number of grants to support innovative projects, community initiatives, and small businesses committed to making an impact. Fill out the form to the right to apply for funding that will help you achieve your business goals and drive meaningful change in your community.
+                    </p>
+                </div>
+
+                <div class="item-2">
+                    <h2 class="light">
+                        Apply for Grants
+                    </h2>
+
+                    <form action="confirmation page.html">
+                        <p class="light">
+                            Fill the form completely
+                        </p>
+
+                        <input type="text" id="name" name="name" placeholder="Name of applicant" required><br>
+                        <input type="email" id="email" name="email" placeholder="Email"><br>
+                        <input type="tel" id="phoneNo" name="phoneNo" placeholder="Phone Number" required><br>
+                        <input type="number" pattern="\d{11}" maxlength="11" id="NIN" name="NIN" placeholder="NIN" required><br>
+                        <input type="text" id="businessAddress" name="businessAddress" placeholder="Existing Business Address" required><br>
+
+                        <p class="light">
+                            Upload Short Business Brief
+                        </p>
+
+                        <input type="file" id="businessBrief" name="businessBrief" placeholder="Drag and Drop file or Browse" required><br>
+                        <input type="text" id="bankName" name="bankName" placeholder="Bank Name" required><br>
+                        <input type="number" id="bankAcctNo" name="bankAcctNo" placeholder="Bank Account Number"  required><br>
+                        <input type="text" id="businessRevenue" name="businessRevenue" placeholder="How much does your business make each month?"  required><br>
+                        <input type="text" id="trainApprentice?" name="trainApprentice?" placeholder="Do you train any apprentice"  required><br>
+                        <input type="text" id="customerNo" name="customerNo" placeholder="How many customers do you serve daily"  required><br>
+                        <input type="text" id="whatYouNeed" name="whatYouNeed" placeholder="What is the grant going to help you with?"  required><br>
+
+                        <input style="min-width: 100px;" type="submit" value="submit" id="form-button" href="confirmation page.html">
+                        <!--<a href="confirmation page.html" id="form-button">Submit</a>-->
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
