@@ -1,0 +1,84 @@
+.text-card-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 25rem;
+    //overflow: hidden;
+    color: #fff;
+
+    @include respond(tab-land) {
+        margin-top: 28rem;
+    }
+
+    @include respond(tab-port) {
+        margin-top: 20rem;
+    }
+
+    @media (max-width: 550px) {
+        margin-top: 30rem;
+    }
+
+    @media (max-width: 425px) {
+        margin-top: 40rem;
+    }
+
+    @media (max-width: 355px) {
+        margin-top: 50rem;
+    }
+
+    @media (max-width: 305px) {
+        margin-top: 60rem;
+    }
+}
+
+.text-card {
+    display: block;
+    background-color: $color-secondary-1;
+    height: auto;
+    position: relative;
+    width: 40%;
+    border-radius: 3rem;
+    padding: 3rem;
+    cursor: pointer;
+    transition: all .1s ease-in;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: $shadow-default;
+
+        background-color: $color-accent-bright;
+        color: $color-grey-darker;
+    }
+
+    &:hover img {
+        opacity: 1;
+        z-index: -1;
+    }
+
+    &:active {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    @include respond(tab-land) {
+        margin-bottom: 10rem;
+    }
+
+    @include respond(tab-port) {
+        width: 70%;
+    } 
+}
+
+.text-card__overlay-img {
+    width: 22rem; /* Full width */
+    position: absolute;
+    left: 75%;
+    top: 1rem;
+    opacity: 0.5;
+    transform: translateX(-50%); /* Center horizontally */
+
+    @include respond(phone) {
+        width: 20rem;
+        left: 65%;
+    }
+}

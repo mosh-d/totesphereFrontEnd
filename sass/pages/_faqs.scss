@@ -1,0 +1,25 @@
+.faq * {
+    overflow: visible;
+}
+
+.faq {
+    position: relative;
+}
+
+.faq-sections {
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.section-faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        color: $color-secondary-1;
+    }
+}

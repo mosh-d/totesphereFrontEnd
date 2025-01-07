@@ -1,0 +1,95 @@
+.grant-card {
+    background-color: rgba($color-footer, .1);
+    height: auto;
+    min-height: 15rem;
+    // max-height: 30rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+
+    display: grid;
+    grid-template-columns: [pic-start] minmax(13rem, 1fr) [pic-end details-start] 5fr [details-end];
+    grid-template-rows: [text-start] 1fr [text-end button-start] 1fr [button-end];
+
+    @include respond(phone) {
+        grid-template-rows: [pic-start] minmax(20rem, 30rem) [pic-end details-start] 1fr [details-end button-start] .5fr [button-end];
+    }
+
+    &:hover > &__item-1::after {
+        opacity: 0;
+    }
+
+    &__item-1 {
+        overflow: hidden;
+        position: relative;
+        // border-radius: 1.5rem;
+        height: 100%;
+
+        grid-column: pic-start / pic-end;
+        grid-row: text-start / button-end;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 10;
+            transition: all .2s;
+        }
+
+        @include respond(phone) {
+            grid-row: pic-start / pic-end;
+            grid-column: 1 / -1;
+        }
+    }
+    
+    &__item-2 {
+        padding: 3rem;
+        color: $color-grey-darker;
+
+        /* display: flex;
+        align-items: center; */
+
+        span {
+            font-weight: 700;
+        }
+
+        @include respond(phone) {
+            grid-row: details-start / details-end;
+            grid-column: 1 / -1;
+
+            text-align: center;
+        }
+    }
+
+    &__item-3 {
+        padding: 3rem;
+
+        @include respond(phone) {
+            grid-row: button-start / button-end;
+            grid-column: 1 / -1;
+
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        object-position: top left;
+
+        &--2 {
+            object-position: top center;
+        }
+
+        &--3 {
+            object-position: top right;
+        }
+    }
+}

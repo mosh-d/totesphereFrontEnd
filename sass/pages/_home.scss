@@ -1,0 +1,60 @@
+.home * {
+    overflow: visible;
+}
+
+.home {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../src/img/medium-shot-smiley-artisans-workshop.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(100%);
+    opacity: .1;
+    z-index: -1;
+}
+
+.home-sections {
+    padding: 5rem 15rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    @include respond(tab-land) {
+        padding: 5rem;
+    }
+
+    @include respond(phone) {
+        padding: 1rem;
+    }
+}
+
+.section-charts {
+    padding: 5rem;
+}
+
+.text-card-container {
+    display: flex;
+    justify-content: space-between;
+
+    overflow: visible;
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

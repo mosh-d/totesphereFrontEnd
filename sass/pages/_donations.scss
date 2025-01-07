@@ -1,0 +1,29 @@
+.donations * {
+    overflow: visible;
+}
+
+.donations::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(rgba(59, 118, 137, 0.9), rgba(59, 118, 137, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(../../src/img/colleagues-team-working-company-paperwork-doig-teamwork-analyze-documents-online-research-information-planning-corporate-presentation-with-data-charts-job-collaboration.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.donations {
+    position: relative;
+    z-index: 1;
+    
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

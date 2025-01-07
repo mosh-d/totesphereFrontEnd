@@ -1,0 +1,109 @@
+.hero {
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, .7) 20%, white 80%), 
+        linear-gradient($color-primary, $color-primary), 
+        linear-gradient($color-primary, $color-primary), 
+        url(../../src/img/hero_image.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #fff;
+    height: 90vh;
+    min-height: 1000px;
+    position: relative;
+    animation: backgroundPan 35s infinite alternate ease-in-out;
+    padding: 5rem 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        font-size: $font-size-large-1;
+    }
+
+    h1 {
+
+        @include respond(phone) {
+            font-size: clamp(2rem, 10vw, 7rem);
+        }
+    }
+    
+    @include respond(tab-port) {
+        min-height: 700px;
+    }
+
+    @include respond(phone) {
+        background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, .7) 0%, white 150%), 
+        linear-gradient($color-primary, $color-primary), 
+        linear-gradient($color-primary, $color-primary), 
+        url(../../src/img/hero_image.png);
+        padding: 4rem;
+    }
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: top center;
+    }
+    100% {
+        background-position: bottom center;
+    }
+}
+
+.hero__content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: visible;
+
+    @include respond(tab-port) {
+        justify-content: end;
+    }
+}
+
+.hero__content-item-1 {
+
+    @include respond(tab-port) {
+        margin-bottom: auto;
+    }
+}
+
+.hero__content-item-2 {
+
+    @include respond(tab-land) {
+        margin-top: auto;
+        margin-bottom: 5rem;
+    }
+
+    @include respond(tab-port) {
+        margin-bottom: 2rem;
+    } 
+}
+
+.hero__content-item-3 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: visible;
+    height: 7rem;
+}
+
+.hero__content-item-3-item-1 {
+
+    @include respond(phone) {
+        font-size: $font-size-small-1;
+    }
+}
+
+.hero__content-item-3-item-2 {
+    margin-left: 2rem;
+
+    @include respond(phone) {
+        font-size: $font-size-small-1;
+    }
+}

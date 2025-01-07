@@ -1,0 +1,186 @@
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+    height: 300px;
+    position: relative;
+    width: 100%;
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 1000px;
+    }
+
+    @include respond(phone) {
+        height: 1320px;
+        margin-top: 16rem;
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3rem);
+        }
+    }
+}
+
+.bar-chart {
+    display: flex;
+    width: 43%;
+    gap: 10px;
+    align-items: flex-end; /* Aligns bars to the bottom */
+    position: relative;
+    background: repeating-linear-gradient(
+        to top,
+        #7e7e7e,
+        #e0e0e0 1px,
+        transparent 1px,
+        transparent 30px
+    );   
+
+    @include respond(tab-port) {
+        width: 90%;
+        height: 100%;
+        margin-left: auto;
+    }
+}
+
+.bar-chart--2 {
+
+    @include respond(tab-port) {
+        margin-top: 50rem;
+    }    
+
+    @media (max-width: 520px) {
+        margin-top: 60rem;
+    }
+
+    @media (max-width: 450px) {
+        margin-top: 70rem;
+    }
+
+    @media (max-width: 380px) {
+        margin-top: 80rem;
+    }
+
+    @media (max-width: 330px) {
+        margin-top: 90rem;
+    }
+
+    @media (max-width: 300px) {
+        margin-top: 100rem;
+    }
+}
+
+.bar-chart__header {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 102px;
+
+    color: $color-secondary-1;
+
+    @include respond(tab-port) {
+        height: auto;
+    }    
+}
+
+.bar-chart__side-values {
+    position: absolute;
+    right: 100%;
+    display: flex;
+    justify-content: space-between; /* Evenly space out the text cards */
+    height: 300px;
+    align-items: space-between;
+}
+
+.bar-chart__vert-text {
+    writing-mode: vertical-lr; /* Rotate text 90 degrees clockwise */  
+    transform: rotate(180deg);
+    text-align: center;             
+}
+
+.bar-chart__num {
+    margin-right: 10px;
+    margin-left: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        font-size: clamp(7px, 1.1vw, 20px);
+    }
+}
+
+.bar-chart__line {
+    width: 2px;
+    height: 100%;
+    background-color: #bebebe;
+    float: right;
+    margin-right: 5px;
+}
+
+.bar-chart__bottom-text-container {
+    position: absolute;
+    top: 100%;
+    margin-top: 40px;
+
+    p {
+        font-size: clamp(15px, 1.1vw, 20px);
+    }
+
+    h3 {
+        color: $color-secondary-1;
+    }
+}
+
+.bar-chart__bar {
+    width: 20%; /* Adjust based on the number of bars */
+    background-color: #333;
+    transition: height 0.3s ease;
+    position: relative;
+    //border-top: 5px solid $color-accent;
+    border-radius: 3px 3px 0 0;
+
+    height: 0;
+    transition: height 0.3s ease;
+    --bar-height-1: 20%; /* Example variable for dynamic height */
+    --bar-height-2: 28%; /* Example variable for dynamic height */
+    --bar-height-3: 40%; /* Example variable for dynamic height */
+    --bar-height-4: 54%; /* Example variable for dynamic height */
+    --bar-height-5: 60%; /* Example variable for dynamic height */
+    --bar-height-6: 68%; /* Example variable for dynamic height */
+    --bar-height-7: 76%; /* Example variable for dynamic height */
+    --bar-height-8: 80%; /* Example variable for dynamic height */
+    --bar-height-9: 84%; /* Example variable for dynamic height */
+    --bar-height-10: 14%; /* Example variable for dynamic height */
+    --bar-height-11: 22%; /* Example variable for dynamic height */
+    --bar-height-12: 34%; /* Example variable for dynamic height */
+    --bar-height-13: 45%; /* Example variable for dynamic height */
+    --bar-height-14: 55%; /* Example variable for dynamic height */
+    --bar-height-15: 64%; /* Example variable for dynamic height */
+    --bar-height-16: 75%; /* Example variable for dynamic height */
+    --bar-height-17: 84%; /* Example variable for dynamic height */
+    --bar-height-18: 95%; /* Example variable for dynamic height */
+}
+
+.bar-chart__label {
+    position: absolute;
+    bottom: 100%; /* Position label above the bar */
+    text-align: center;
+    width: 100%;
+    color: #333;
+    font-size: clamp(7px, 1.1vw, 20px);
+    margin-bottom: 10px;
+}
+
+.bar-chart__label-bottom {
+    position: absolute;
+    top: 100%; /* Position label above the bar */
+    text-align: center;
+    width: 100%;
+    color: #333;
+    font-size: clamp(10px, 1.1vw, 20px);
+}

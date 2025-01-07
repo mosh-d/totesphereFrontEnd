@@ -1,0 +1,47 @@
+.top-bar__logo {
+    background-image: url('../../src/img/LOGO.png');
+    background-color: transparent;
+    opacity: .75;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 9rem;
+    width: 11rem;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all .1s ease-in;
+
+    &:hover {
+        transform: scale(1.2);
+        opacity: 1;
+        //box-shadow: $shadow-default;
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+
+    @include respond(tab-port) {
+        height: 11rem;
+        width: 13rem;
+        top: .3rem;
+        left: .3rem;
+    } 
+
+    @include respond(phone) {
+        height: 9rem;
+        width: 10rem;
+        top: 1rem;
+    }
+}
+
+.top-bar__logo--hide {
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}

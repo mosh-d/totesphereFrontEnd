@@ -1,0 +1,83 @@
+.button {
+    font-family: 'Merriweather Sans', sans-serif;
+    border: 1.5px solid #fff;
+    padding: .7rem 3rem;
+    border-radius: 1000px;
+    letter-spacing: .1rem;
+    display: inline-block;
+    transition: all .15s ease-in-out, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    font-weight: 600;
+    letter-spacing: .2rem;
+    box-shadow: $shadow-light;
+}
+
+.button--default {
+    background: none;
+    color: #fff;
+}
+
+.button--default:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button--default--dark {
+    border: 2px solid $color-grey-dark;
+    color: $color-grey-darker;
+}
+
+.button--default--dark:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.button--default:active {
+    transform: scale(1);
+}
+
+.button--action {
+    background-color: $color-accent;
+    color: #fff;
+}
+
+.button--action:hover {
+    background-color: $color-accent-bright;
+    color: $color-grey-darker;
+    border: none;
+    transform: scale(1.2);
+}
+
+.button--action:active {
+    transform: scale(1);
+}
+
+.button--grants {
+    position: fixed;
+    top: 3rem;
+    right: 1rem;
+    z-index: 1000;
+    margin: 0 3rem;
+    color: #fff;
+
+    @include respond(tab-port) {
+
+        &,
+        &:hover {
+            right: 50%;
+            transform: translateX(50%) scale(1.2);
+            margin: 0;
+        }
+    }
+
+    @include respond(phone) {
+        font-size: $font-size-small-2;
+        top: 4rem;
+    }
+}
+
+.button--donation {
+    color: #fff;
+}

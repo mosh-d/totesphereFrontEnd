@@ -1,0 +1,209 @@
+.flex-con__item-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-con__form-item {
+    margin-bottom: 2rem;
+}
+
+.flex-con__form-item--checkbox {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.flex-con__checkbox {
+    margin-right: 2rem;
+}
+
+.flex-con__checkbox-text {
+    line-height: 2rem;
+    margin-top: -.2rem;
+}
+
+.flex-con__form-item-group-inline {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    align-items: center;
+    width: 100%;
+
+    & input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none; 
+        width: 2rem;
+        height: 2rem;
+        max-height: 2rem;
+        max-width: 2rem;
+        // flex: 0 0;
+        border: 2px solid #888;
+        border-radius: 50%; 
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+        margin: auto;
+    }
+    
+    & input[type="radio"]:hover {
+        border-color: $color-accent; 
+    }
+      
+    & input[type="radio"]:checked {
+        background-color: $color-accent-bright; 
+        border-color: $color-accent; 
+    }
+      
+  /*   & input[type="radio"]:checked::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        margin: auto; 
+        position: relative;
+        top: 2px;
+    } */
+      
+    & label {
+        margin-left: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.flex-con__form-item:invalid {
+    border: 2px solid red; 
+}
+
+.flex-con__form-item:valid {
+    border: 2px solid green;
+  }
+
+.flex-con__form-item--inline {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+    &--item-1 input[type="number"] {
+        display: none;
+        flex: 0;
+        width: 6rem;
+        margin: auto 0;
+    }
+
+    label {
+        height: 100%;
+    }
+}
+
+.flex-con__form-item--radio {
+
+}
+
+.button--default--return {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110%;
+    width: 19rem;
+}
+
+#age {
+    min-width: 3rem;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.flex-con__form-item-button {
+    color: transparent; 
+}
+
+.flex-con__form-item-button {
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, .4); /* Blue background */
+    color: white; /* White text */
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    content: "Upload file"; 
+}
+
+.flex-con__form-item-button:hover {
+    background-color: $color-grey-darker;
+    color: $color-grey-darker;
+}
+
+.flex-con__form-item-button:active {
+    background-color: black;
+    color: black;
+}
+
+.flex-con__form-item-button::-webkit-file-upload-button {
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, .4); /* Blue background */
+    color: white; /* White text */
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    content: "Upload file"; 
+}
+
+.flex-con__form-item-button::-webkit-file-upload-button:hover {
+    background-color: $color-grey-darker;
+    color: $color-grey-darker;
+}
+
+.flex-con__form-item-button::-webkit-file-upload-button:active {
+    background-color: black;
+    color: black;
+}
+
+.flex-con__form-item-button::file-selector-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    content: "Upload file"; 
+}
+
+/* .flex-con__form-item-button::file-selector-button:hover {
+    color: $color-grey-darker;
+} */
+
+/* Optional: Customize the "No file chosen" part */
+/* .flex-con__form-item-button::-webkit-file-upload-button {
+    padding: 10px 20px;
+    margin-right: 10px; 
+    background-color: #0056b3; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+/* .flex-con__form-item-button::-webkit-file-upload-button:hover {
+    background-color: #003f7f; 
+} */

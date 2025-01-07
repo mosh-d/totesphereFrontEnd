@@ -1,0 +1,51 @@
+.donation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: $color-footer;
+    color: #fff;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    border-radius: 2rem;
+    padding: 5rem;
+    max-width: 60rem;
+    box-shadow: $shadow-default;
+
+    @include respond(phone) {
+        text-align: center;
+    }
+}
+
+//.donation-card__header {
+
+//}
+
+//.donation-card__text {
+
+//}
+
+.donation-card__amount {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    height: 3rem;
+    width: 35%;
+    min-height: 40px;
+    min-width: 120px;
+    border: none;
+    border-radius: .5rem;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    appearance: none;
+}
+  
+  input[type="number"]:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus {
+    border: 2px solid $color-accent-bright;
+    outline: none;
+}

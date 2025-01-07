@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Apply for research grant</title>
+
+        <link rel="stylesheet", href="./src/css/style.css"/>
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="apply-for-grants apply-for-grants--2"> <!-- for the different background images -->
+            <a href="homepage.html" class="top-bar__logo"></a>
+
+            <!-- <div class="b-menu-positioner">
+                <label for="navi-toggle" class="navigation__button">
+                    <div class="b-menu" onclick="toggleNav('vert-nav-bar')">
+                        <div class="icon"></div>
+                    </div>
+                </label>
+            </div>
+    
+            <nav id="vert-nav-bar" class="vert-nav-bar">
+                <ul class="vert-nav-item">
+                    <li><a class="current-nav-item" href="./homepage.html" target="_self">Home</a></li>
+                    <li><a href="./grants page.html" target="_self">Totesphere Grants</a></li>
+                    <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                    <li><a>Totesphere Education</a></li>
+                    <li><a>Nigeria Leadership History</a></li>-->
+             <!--    </ul>
+            </nav> -->
+
+            <header>
+                <div class="top-bar top-bar--light-shadow">
+                    <!--<h1>Logo</h1>-->
+                    <div class="top-bar__info">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <em class="top-bar__info-text"> This website is intended for Nigerian residents</em>
+                    </div>
+                </div>
+            </header>
+
+            <section class="flex-con">
+                <div class="flex-con__item-1">
+                    <h2>
+                        Apply for a research grant!
+                    </h2>
+
+                    <p>
+                        We're offering grants to support innovative projects, community initiatives, and small businesses committed to making an impact. Fill out the form to the right to apply for funding that will help you achieve your goals and drive meaningful change in your community.
+                    </p>
+                </div>
+
+                <div class="flex-con__item-2">
+                    <!-- <h2 class="flex-con__header u-margin-bottom-small">
+                        Apply for small business grant
+                    </h2> -->
+
+                    <form class="flex-con__form" action="#">
+                        <p class="u-margin-bottom-small">
+                            Fill the form completely
+                        </p>
+
+                        <input class="flex-con__form-item" type="text" id="name" name="name" placeholder="Name of applicant" required><br>
+                        <input class="flex-con__form-item" type="email" id="email" name="email" placeholder="Email" required><br>
+                        <input class="flex-con__form-item" type="tel" id="phoneNo" name="phoneNo" placeholder="Phone Number" required><br>
+                        <input class="flex-con__form-item" type="text" id="affiliatedInstitution" name="affiliatedInstitution" placeholder="Affiliated Institution" required><br>
+                        <input class="flex-con__form-item" type="text" id="researchTitle" name="researchTitle" placeholder="Title of Research" required><br>
+                        <input class="flex-con__form-item" type="text" id="researchSummary" name="researchSummary" placeholder="Summary of Research" required><br>
+                        <input class="flex-con__form-item" type="text" id="researchObjectives" name="researchObjectives" placeholder="Research Objectives" required><br>
+                        <input class="flex-con__form-item" type="text" id="bankName" name="bankName" placeholder="Bank Name" required><br>
+                        <input class="flex-con__form-item" type="number" id="bankAcctNo" name="bankAcctNo" placeholder="Bank Account Number"  required><br>
+                        <input class="flex-con__form-item u-margin-bottom-medium" type="number" id="requestedAmount" name="requestedAmount" placeholder="Requested Amount"  required><br>
+
+                        <p class="u-margin-bottom-small">
+                            Upload a Budjet Breakdown, Research Proposal, and Curriculum Vitae
+                        </p>
+                        <div class="file-upload">
+                            <!-- <label for="businessBrief" class="custom-file-label">
+                                Click to add file
+                            </label> -->
+                            <input class="flex-con__form-item-button" type="file" id="businessBrief" name="businessBrief" multiple required>
+                            <!--<div class="drop-area" id="drop-area">
+                                <p><i class="fa fa-upload"></i> Drag and drop your files here</p>
+                            </div>-->
+                        </div>
+
+                        <input class="button button--default button--default--centered" type="submit" value="submit" id="form-button" href="confirmation page.html">
+                        <!--<a href="confirmation page.html" id="form-button">Submit</a>-->
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer footer--2">
+                <!--<div class="footer__item footer__item-1">
+                    <h3>Get in touch</h3>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>-->
+                
+                <div class="footer__item footer__item-2">
+                    <div class="footer__item-2-item footer__item-2-item-1">
+                        <h3>Links</h3>
+                        <!--<a>Search</a>-->
+                        <a href="./about us.html">About Us</a>
+                        <a href="./donations.html">Donate</a>
+                    </div>
+    
+                    <!--<div class="footer__item-2-item footer__item-2-item-2">
+                        <h3>Help</h3>
+                        <a>Payments</a>
+                    </div>-->
+    
+                    <div class="footer__item-2-item footer__item-2-item-3">
+                        <h3>Apply</h3>
+                        <a href="./homepage.html" class="small">Home</a>
+                        <a href="./grants page.html" class="small">Grants</a>
+                        <a href="./faq.html">FAQs</a>
+                        <!--<a class="small">Health</a>
+                        <a class="small">Education</a>-->
+                    </div>
+                </div>
+    
+                <!--<div class="footer__item footer__item-3">
+                    <h3>Newsletter</h3>
+                    <div><input placeholder="example@email.com" /></div>
+                    <button class="dark-button">Subscribe</button>
+                </div>-->
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+.apply-for-grants * {
+    overflow: visible;
+}
+
+.apply-for-grants::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.apply-for-grants--1::before {
+    background-image: 
+    linear-gradient(rgba(59, 118, 137, 0.9), rgba(59, 118, 137, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(../../src/img/medium-shot-smiley-man-with-vegetables.jpg);
+}
+
+.apply-for-grants--2::before {
+    background-image: 
+    linear-gradient(rgba(59, 118, 137, 0.9), rgba(59, 118, 137, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(../../src/img/cheerful-black-medic-using-microscope.jpg);
+    background-position: top center;
+}
+
+.apply-for-grants--3::before {
+    background-image: 
+    linear-gradient(rgba(59, 118, 137, 0.9), rgba(59, 118, 137, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(../../src/img/portrait-handsome-african-barista-standing-with-crossed-arms-counter-trendy-coffee-shop.jpg);
+    background-position: right;
+}
+
+.apply-for-grants--4::before {
+    background-image: 
+    linear-gradient(rgba(59, 118, 137, 0.9), rgba(59, 118, 137, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(../../src/img/high-angle-stacked-books-graduation-cap-diploma-education-day.jpg);
+}
+
+.apply-for-grants {
+    position: relative;
+    z-index: 1;
+    
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
