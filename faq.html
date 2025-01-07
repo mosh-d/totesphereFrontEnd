@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>About us</title>
+    <title>FAQs</title>
 
-    <link rel="stylesheet", href="./src/style.css"/>
+    <link rel="stylesheet", href="./src/css/style.css"/>
     <script src="./src/index.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,146 +18,180 @@
 
 <body>
     <div class="faq">
-        <div class="faq-container">
-            <div class="faq-section">
-                <h3>Donation FAQs</h3>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>What types of donations do you accept?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">We accept monetary donations via credit card, PayPal, or check.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>Is my donation tax-deductible?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Yes, all donations are tax-deductible to the fullest extent allowed by law.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>Can I make a recurring donation?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Yes, you can set up a monthly or annual recurring donation.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>How do I know my donation is secure?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Our site uses SSL encryption and secure payment processing.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>What is your refund policy?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Donations are non-refundable, but can be directed to a different program.</p>
-                </div>
-            </div>
+        <a href="homepage.html" class="top-bar__logo"></a>
 
-            <div class="faq-section">
-                <h3>Grant FAQs</h3>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>What types of grants do you offer?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">We offer grants for business development.</p>
+        <div class="b-menu-positioner">
+            <label for="navi-toggle" class="navigation__button">
+                <div class="b-menu" onclick="toggleNav('vert-nav-bar')">
+                    <div class="icon"></div>
                 </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>Who is eligible for grants?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Non-profit organizations, schools, and community groups.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>How do I apply for a grant?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Submit an online application with proposal, budget, and supporting documents.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>What is the grant review process?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Applications are reviewed by our grants committee within 6-8 weeks.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>How are grant recipients selected?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Based on alignment with our mission, impact, and financial need.</p>
-                </div>
-            </div>
-
-            <div class="faq-section">
-                <h3>General FAQs</h3>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>What is your mission?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">To support communities through donations and grants.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>How do you use donated funds?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Funds support grants, programs, and operational costs.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>Can I volunteer?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Yes, contact us for volunteer opportunities.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>How do I contact your organization?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Email, phone, or mail; see contact page.</p>
-                </div>
-                <div class="faq-item" onclick="toggle(this)">
-                    <h4>Do you have a privacy policy?</h4>
-                    <i class="fa-solid fa-minus"></i>
-                    <i class="fa-solid fa-plus"></i>
-                    <p class="showHide">Yes, see our website's privacy policy page.</p>
-                </div>
-            </div>
+            </label>
         </div>
 
+        <nav id="vert-nav-bar" class="vert-nav-bar">
+            <ul class="vert-nav-item">
+                <li><a class="current-nav-item" href="./homepage.html" target="_self">Home</a></li>
+                <li><a href="./grants page.html" target="_self">Totesphere Grants</a></li>
+                <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                <li><a>Totesphere Education</a></li>
+                <li><a>Nigeria Leadership History</a></li>-->
+            </ul>
+        </nav>
+
+        <header>
+            <div class="top-bar top-bar--light-shadow">
+                <!--<h1>Logo</h1>-->
+                <div class="top-bar__info">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <em class="top-bar__info-text"> This website is intended for Nigerian residents</em>
+                </div>
+            </div>
+        </header>
+
+        <main class="faq-sections">
+            <section class="section-faq-container">
+                <div class="section-faq-container__section u-margin-bottom-big">
+                    <h2>Donation FAQs</h2>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>What types of donations do you accept?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">We accept monetary donations via credit card, PayPal, or check.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>Is my donation tax-deductible?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Yes, all donations are tax-deductible to the fullest extent allowed by law.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>Can I make a recurring donation?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Yes, you can set up a monthly or annual recurring donation.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>How do I know my donation is secure?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Our site uses SSL encryption and secure payment processing.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>What is your refund policy?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Donations are non-refundable, but can be directed to a different program.</p>
+                    </div>
+                </div>
+    
+                <div class="section-faq-container__section u-margin-bottom-big">
+                    <h2>Grant FAQs</h2>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>What types of grants do you offer?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">We offer grants for business development.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>Who is eligible for grants?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Non-profit organizations, schools, and community groups.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>How do I apply for a grant?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Submit an online application with proposal, budget, and supporting documents.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>What is the grant review process?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Applications are reviewed by our grants committee within 6-8 weeks.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>How are grant recipients selected?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Based on alignment with our mission, impact, and financial need.</p>
+                    </div>
+                </div>
+    
+                <div class="section-faq-container__section u-margin-bottom-big">
+                    <h2>General FAQs</h2>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>What is your mission?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">To support communities through donations and grants.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>How do you use donated funds?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Funds support grants, programs, and operational costs.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>Can I volunteer?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Yes, contact us for volunteer opportunities.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>How do I contact your organization?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Email, phone, or mail; see contact page.</p>
+                    </div>
+                    <div class="faq-item" onclick="toggle(this)">
+                        <h3>Do you have a privacy policy?</h3>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <p class="showHide">Yes, see our website's privacy policy page.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <footer class="footer">
-            <div class="footer-1">
+            <!--<div class="footer__item footer__item-1">
                 <h3>Get in touch</h3>
                 <i class="fab fa-facebook"></i>
                 <i class="fab fa-linkedin"></i>
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-twitter"></i>
                 <i class="fas fa-envelope"></i>
-            </div>
+            </div>-->
             
-            <div class="footer-2">
-                <h3>Links</h3>
-                <!--<a class="small">Search</a>-->
-                <a class="small" href="./about us.html">About Us</a>
-                <a class="small" href="./donations.html">Donate</a>
+            <div class="footer__item footer__item-2">
+                <div class="footer__item-2-item footer__item-2-item-1">
+                    <h3>Link</h3>
+                    <!--<a>Search</a>-->
+                    <a href="./donations.html">Donate</a>
+                    <a href="./about us.html">About Us</a>
+                    <!--<a href="./donations.html">Donate</a>-->
+                </div>
+
+                <!--<div class="footer__item-2-item footer__item-2-item-2">
+                    <h3>Help</h3>
+                    <a>Payments</a>
+                </div>-->
+
+                <div class="footer__item-2-item footer__item-2-item-3">
+                    <h3>FAQs</h3>
+                    <a href="./grants page.html" class="small">Grants</a>
+                    <a href="./homepage.html" class="small">Home</a>
+                    <!--<a class="small">Health</a>
+                    <a class="small">Education</a>-->
+                </div>
             </div>
-    
-            <div class="footer-3">
-                <h3>Help</h3>
-                <a href="./faq.html" class="small">FAQs</a>
-                <!--<a class="small">Payments</a>-->
-            </div>
-    
-            <div class="footer-4">
-                <h3>FAQs</h3>
-                <a href="./grants page.html" class="small">Grants</a>
-                <a href="./homepage.html" class="small">Home</a>
-                <!--<a class="small">Health</a>
-                <a class="small">Education</a>-->
-            </div>
-    
-            <div class="footer-5">
+
+            <!--<div class="footer__item footer__item-3">
                 <h3>Newsletter</h3>
                 <div><input placeholder="example@email.com" /></div>
                 <button class="dark-button">Subscribe</button>
-            </div>
+            </div>-->
         </footer>
     </div>
 

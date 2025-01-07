@@ -6,7 +6,7 @@
     
     <title>About us</title>
 
-    <link rel="stylesheet", href="./src/style.css"/>
+    <link rel="stylesheet", href="./src/css/style.css"/>
     <script src="./src/index.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,102 +18,345 @@
 
 <body>
     <div class="about-us-page">
-        <section class="about-section">
-            <span>
-                Totesphre Partenerships is leading a movement 
-                to transform how small businesses scale.
-            </span>
+        <a href="homepage.html" class="top-bar__logo"></a>
 
-            <h2>About Totesphere Partenerships</h2>
-
-            <p>
-                We are Totesphere Partenerships, Nigeria's pioneer 
-                social enterprise organization.
-            </p>
-
-            <h3>Our Mission:</h3>
-
-            <p>
-                Is to change the world by providing support to 
-                        businesses making a profit of less than 50,000 naira a day so they 
-                        can expand their business without reliance on high-interest loans.
-            </p>
-
-            <h3>Our Vision:</h3>
-
-            <p>
-                Is to empower micro-businesses to break the cycle 
-                of poverty and thrive, we envision a world where 
-                entrepreneurs earning less than $10 a day have access 
-                to the resources and support they need to grow and succeed.
-            </p>
-
-            <h3>Core Values:</h3>
-
-            <p>
-                1. Empowerment: Enhancing the capacity of Nigerian
-                businesses and communities.<br>
-                2. Transparency: Ensuring accountability and clarity 
-                in our grant-making and donation processes.<br>
-                3. Inclusivity: Fostering equal opportunities for 
-                all, regardless of background or location.<br>
-                4. Innovation: Encouraging creative solutions 
-                to Nigeria's economic and social challenges. 
-                "We do not invest to exact profit, we invest to 
-                build wealth". <br>
-                5. Collaboration: Building partenerships with 
-                stakeholders to amplify impact. <br>
-                6. Social responsibility: We aim to setup 
-                businesses that would sustain our social 
-                commitments, we won't be reliant on grants 
-                and donations.
-            </p>
-
-            <h3>Partnerships:</h3>
-
-            <p>
-                We collaborate with: <br>
-                Organizations, including government agencies, NGOs, 
-                and private sector companies.
-            </p>
-        </section>
-
-        <footer class="footer">
-        <div class="footer-1">
-            <h3>Get in touch</h3>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fas fa-envelope"></i>
+       <!--  <div class="b-menu-positioner">
+            <label for="navi-toggle" class="navigation__button">
+                <div class="b-menu" onclick="toggleNav('vert-nav-bar')">
+                    <div class="icon"></div>
+                </div>
+            </label>
         </div>
+
+        <nav id="vert-nav-bar" class="vert-nav-bar">
+            <ul class="vert-nav-item">
+                <li><a class="current-nav-item" href="./homepage.html" target="_self">Home</a></li>
+                <li><a href="./grants page.html" target="_self">Totesphere Grants</a></li>
+                <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                <li><a>Totesphere Education</a></li>
+                <li><a>Nigeria Leadership History</a></li>-->
+           <!--  </ul>
+        </nav> -->
+
+        <header>
+            <div class="top-bar top-bar--light-shadow">
+                <!--<h1>Logo</h1>-->
+                <div class="top-bar__info">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <em class="top-bar__info-text"> This website is intended for Nigerian residents</em>
+                </div>
+            </div>
+        </header>
+
+        <main class="about-us-sections">
+            <section class="section-about">
+                <span class="u-margin-bottom-small">
+                    Totesphre Partenerships is leading a movement 
+                    to transform how small businesses scale.
+                </span>
+    
+                <h2>About Totesphere Partenerships</h2>
+    
+                <p>
+                    We are Totesphere Partenerships, Nigeria's pioneer 
+                    social enterprise organization.
+                </p>
+    
+                <h3>Our Mission:</h3>
+    
+                <p>
+                    Is to change the world by providing support to 
+                            businesses making a profit of less than 50,000 naira a day so they 
+                            can expand their business without reliance on high-interest loans.
+                </p>
+    
+                <h3>Our Vision:</h3>
+    
+                <p>
+                    Is to empower micro-businesses to break the cycle 
+                    of poverty and thrive, we envision a world where 
+                    entrepreneurs earning less than $10 a day have access 
+                    to the resources and support they need to grow and succeed.
+                </p>
+    
+                <h3>Core Values:</h3>
+    
+                <p>
+                    1. Empowerment: Enhancing the capacity of Nigerian
+                    businesses and communities.<br>
+                    2. Transparency: Ensuring accountability and clarity 
+                    in our grant-making and donation processes.<br>
+                    3. Inclusivity: Fostering equal opportunities for 
+                    all, regardless of background or location.<br>
+                    4. Innovation: Encouraging creative solutions 
+                    to Nigeria's economic and social challenges. 
+                    "We do not invest to exact profit, we invest to 
+                    build wealth". <br>
+                    5. Collaboration: Building partenerships with 
+                    stakeholders to amplify impact. <br>
+                    6. Social responsibility: We aim to setup 
+                    businesses that would sustain our social 
+                    commitments, we won't be reliant on grants 
+                    and donations.
+                </p>
+    
+                <h3>Partnerships:</h3>
+    
+                <p>
+                    We collaborate with: <br>
+                    Organizations, including government agencies, NGOs, 
+                    and private sector companies.
+                </p>
+
+                <h3 class="u-margin-bottom-small">
+                    Meet the Totesphere team:
+                </h3>
+
+                <div class="profile-card">
+                    <div class="profile-card__title">
+                        <h4>Product Consultant/Co-founder</h4>
+                        <p class="profile-card__name">Tobi Fatilewa</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                            <img class="image" src="./src/img/bro Tobi.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p class="profile-card__details-text">
+                            Helping refine and enhance Totesphere to meet user needs and achieve market success.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-card__title">
+                        <h4>Programme Consultant/Co-founder</h4>
+                        <p class="profile-card__name">Debola Fatilewa</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/sis Debola.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            Leveraging industry insights, she guides programs to achieve optimal performance and lasting success.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-card__title">
+                        <h4>Front-end Developer/Co-founder</h4>
+                        <p class="profile-card__name">Sope Azeez</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/sope.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            In charge of the user facing side of the Totesphere website. Coding the layout and elements you see on the webpage, with a focus on clear design, usability and accessibilty. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Back-end Developer/Co-founder</h4>
+                        <p class="profile-card__name">Chisom Anokwuru</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/chisom.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            In charge of server side redering and API handling. He deploys the website to a secure web server, maintaining scalability for high traffic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Product Designer/Co-founder</h4>
+                        <p class="profile-card__name">Joel Oyeniran</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/joel.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            Specializes in crafting intuitive and engaging user experiences, transforming complex ideas into functional designs that resonate with users.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Database Engineer/Co-founder</h4>
+                        <p class="profile-card__name">Peter Oluyomi</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/peter.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            Passionate about creating efficient and secure systems, he designed the backbone of our data infrastructure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Investor/Co-founder</h4>
+                        <p class="profile-card__name">Teni Fatilewa</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/sis Teni.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            I bring vision and strategic backing to propel innovative ideas and help turn them into impactful ventures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Associate Partner/Co-founder</h4>
+                        <p class="profile-card__name">Tolani Fatilewa</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/tolani.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            Committed to building strategic relationships, he works to drive growth and meaningful outcomes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Legal Consultant/Co-founder</h4>
+                        <p class="profile-card__name">Ife</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/ife.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            She provides expert legal guidance to navigate complex challenges and ensure sound decision-making.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Research Director/Co-founder</h4>
+                        <p class="profile-card__name">Dr Joy Ekekwe</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/joy ekekwe.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            Dedicated to uncovering actionable insights through data and research, fueling innovation and strategy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Programme Manager/Co-founder</h4>
+                        <p class="profile-card__name">Elizabeth</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/elizabeth.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            With a focus on precision and collaboration, she ensures projects are delivered on time and exceed expectations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-card u-margin-none">
+                    <div class="profile-card__title">
+                        <h4>Creative/Co-founder</h4>
+                        <p class="profile-card__name">Marvellous Anson</p>
+                    </div>
+
+                    <div class="profile-card__pfp">
+                        <img src="./src/img/marvelous.jpg" alt="profile picture">
+                    </div>
+
+                    <div class="profile-card__details">
+                        <p>
+                            From concept to creation, she brings ideas to life through visuals that captivate and communicate effectively.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
         
-        <div class="footer-2">
-            <h3>Links</h3>
-            <!--<a class="small">Search</a>-->
-            <a class="small" href="./about us.html">About Us</a>
-            <a class="small" href="./donations.html">Donate</a>
-        </div>
 
-        <div class="footer-3">
-            <h3>Help</h3>
-            <a href="./faq.html" class="small">FAQs</a>
-            <!--<a class="small">Payments</a>-->
-        </div>
+        <footer class="footer footer--2">
+            <!--<div class="footer__item footer__item-1">
+                <h3>Get in touch</h3>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-envelope"></i>
+            </div>-->
+            
+            <div class="footer__item footer__item-2">
+                <div class="footer__item-2-item footer__item-2-item-1">
+                    <h3>Link</h3>
+                    <!--<a>Search</a>-->
+                    <a href="./donations.html">Donate</a>
+                    <!--<a href="./donations.html">Donate</a>-->
+                </div>
 
-        <div class="footer-4">
-            <h3>About us</h3>
-            <a href="./homepage.html" class="small">Home</a>
-            <a href="./grants page.html" class="small">Grants</a>
-            <!--<a class="small">Health</a>
-            <a class="small">Education</a>-->
-        </div>
+                <!--<div class="footer__item-2-item footer__item-2-item-2">
+                    <h3>Help</h3>
+                    <a>Payments</a>
+                </div>-->
 
-        <div class="footer-5">
-            <h3>Newsletter</h3>
-            <div><input placeholder="example@email.com" /></div>
-            <button class="dark-button">Subscribe</button>
-        </div>
+                <div class="footer__item-2-item footer__item-2-item-3">
+                    <h3>About us</h3>
+                    <a href="./grants page.html" class="small">Grants</a>
+                    <a href="./homepage.html" class="small">Home</a>
+                    <a href="./faq.html">FAQs</a>
+                    <!--<a class="small">Health</a>
+                    <a class="small">Education</a>-->
+                </div>
+            </div>
+
+            <!--<div class="footer__item footer__item-3">
+                <h3>Newsletter</h3>
+                <div><input placeholder="example@email.com" /></div>
+                <button class="dark-button">Subscribe</button>
+            </div>-->
         </footer>
     </div>
 

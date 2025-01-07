@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home</title>
+
+    <link rel="stylesheet", href="./src/css/style.css"/>
+    <script src="./src/index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="home">
+        <a href="homepage.html" class="top-bar__logo"></a>
+
+        <div class="b-menu-positioner">
+            <label for="navi-toggle" class="navigation__button">
+                <div class="b-menu" onclick="toggleNav('vert-nav-bar')">
+                    <div class="icon"></div>
+                </div>
+            </label>
+        </div>
+
+        <nav id="vert-nav-bar" class="vert-nav-bar">
+            <ul class="vert-nav-item">
+                <li><a class="current-nav-item" href="./homepage.html" target="_self">Home</a></li>
+                <li><a href="./grants page.html" target="_self">Totesphere Grants</a></li>
+                <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                <li><a>Totesphere Education</a></li>
+                <li><a>Nigeria Leadership History</a></li>-->
+            </ul>
+        </nav>
+
+        <header>
+            <div class="top-bar top-bar--dark-shadow">
+                <!--<h1>Logo</h1>-->
+                <div class="top-bar__info">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <em class="top-bar__info-text"> This website is intended for Nigerian residents</em>
+                </div>
+            </div>
+
+            <div class="hero">
+                <nav class="nav-bar u-margin-bottom-huge">
+                    <ul class="nav-bar__nav-item nav-bar__nav-item--light">
+                        <li><a class="nav-bar__current-nav-item nav-bar__current-nav-item--light" href="./homepage.html" target="_self">Home</a></li>
+                        <li><a href="./grants page.html" target="_self">Totesphere Grants</a></li>
+                        <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                        <li><a>Totesphere Education</a></li>
+                        <li><a>Nigeria Leadership History</a></li>-->
+                    </ul>
+                </nav>
+
+                <div class="hero__content">
+                    <div class="hero__content-item-1">
+                        <h1>
+                            Empowering Small<br /> Businesses in<br /> Nigeria
+                        </h1>
+                    </div>
+
+                    <div class="hero__content-item-2">
+                        <p class="light">
+                            Apply for a grant or interest-free<br /> loan to 
+                            scale up your small business
+                        </p>
+                    </div>
+
+                    <div class="hero__content-item-3">
+                        <a href="./grants page.html#g-c" target="_self" class="button button--action hero__content-item-3-item-1" id="active">Apply now</a>
+
+                        <a href="./donations.html" target="_blank" class="button button--default hero__content-item-3-item-2">Donate now</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-sections">
+            <section class="section-charts">
+                <!--<div class="text-card-container-0">
+                    <!--<div class="image-box">
+                        <a href="./about us.html" class="">
+                        <img class="image" src="./src/images/modern-business-center.jpg " />
+                        </a>
+                    </div>
+    
+                    <div class="about-us">
+                        <h2>About Us</h2>
+                        <p>Totesphere Partnership was formed in 2024 as a social 
+                            enterprise looking to reduce inequality in the Nigerian 
+                            informal market sector.</p>
+                    </div>-->
+                <!--</div>-->
+    
+                <div class="charts-container">
+                    <div class="bar-chart bar-chart--1">
+                        <h2 class="bar-chart__header">Estimated Nigerian Startup Failure Rate (2016-2024)</h2>
+    
+                        <div class="bar-chart__side-values">
+                            <p class="bar-chart__vert-text">Faliure rate (%)</p>
+    
+                            <div class="bar-chart__num">
+                                <span>65</span>
+    
+                                <span>60</span>
+        
+                                <span>55</span>
+        
+                                <span>50</span>
+        
+                                <span>45</span>
+        
+                                <span>40</span>
+                            </div>
+                           
+                            <div class="bar-chart__line"></div>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-1);">
+                            <span class="bar-chart__label">45%</span>
+                            <span class="bar-chart__label-bottom">2016</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-2);">
+                            <span class="bar-chart__label">47%</span>
+                            <span class="bar-chart__label-bottom">2017</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-3);">
+                            <span class="bar-chart__label">50%</span>
+                            <span class="bar-chart__label-bottom">2018</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-4);">
+                            <span class="bar-chart__label">53%</span>
+                            <span class="bar-chart__label-bottom">2019</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-5);">
+                            <span class="bar-chart__label">55%</span>
+                            <span class="bar-chart__label-bottom">2020</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-6);">
+                            <span class="bar-chart__label">57%</span>
+                            <span class="bar-chart__label-bottom">2021</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-7);">
+                            <span class="bar-chart__label">59%</span>
+                            <span class="bar-chart__label-bottom">2022</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-8);">
+                            <span class="bar-chart__label">60%</span>
+                            <span class="bar-chart__label-bottom">2023</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-9);">
+                            <span class="bar-chart__label">61%</span>
+                            <span class="bar-chart__label-bottom">2024</span>
+                        </div>
+                        <!-- Additional bars -->
+    
+                        <div class="bar-chart__bottom-text-container">
+                            <h3 class="bar-chart__bottom-text-header">Nigerian Startup Failure Rate (2016–2024)</h3>
+    
+                            <p class="bar-chart__bottom-text-paragraph">
+                                This chart illustrates the estimated trend of Nigerian startup failure rates from 2016 to 2024. Over the years, startup failure rates appear to increase gradually, likely influenced by challenges such as limited funding access, intense competition, and economic instability. The failure rate rose from around 45% in 2016 to an estimated 61% in 2024, reflecting the high-risk environment for startups in Nigeria despite the country’s promising entrepreneurial spirit.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="bar-chart bar-chart--2">
+                        <h2 class="bar-chart__header">Estimated Population of Nigeria (2016-2024)</h3>
+    
+                        <div class="bar-chart__side-values">
+                            <p class="bar-chart__vert-text">Population (millions)</p>
+    
+                            <div class="bar-chart__num">
+                                <span>230</span>
+    
+                                <span>220</span>
+        
+                                <span>210</span>
+        
+                                <span>200</span>
+        
+                                <span>190</span>
+        
+                                <span>180</span>
+                            </div>
+                           
+                            <div class="bar-chart__line"></div>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-10);">
+                            <span class="bar-chart__label">187m</span>
+                            <span class="bar-chart__label-bottom">2016</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-11);">
+                            <span class="bar-chart__label">191m</span>
+                            <span class="bar-chart__label-bottom">2017</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-12);">
+                            <span class="bar-chart__label">197m</span>
+                            <span class="bar-chart__label-bottom">2018</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-13);">
+                            <span class="bar-chart__label">202m</span>
+                            <span class="bar-chart__label-bottom">2019</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-14);">
+                            <span class="bar-chart__label">207m</span>
+                            <span class="bar-chart__label-bottom">2020</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-15);">
+                            <span class="bar-chart__label">212m</span>
+                            <span class="bar-chart__label-bottom">2021</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-16);">
+                            <span class="bar-chart__label">217m</span>
+                            <span class="bar-chart__label-bottom">2022</span>
+                        </div>
+    
+                         <div class="bar-chart__bar" style="height: var(--bar-height-17);">
+                            <span class="bar-chart__label">222m</span>
+                            <span class="bar-chart__label-bottom">2023</span>
+                        </div>
+    
+                        <div class="bar-chart__bar" style="height: var(--bar-height-18);">
+                            <span class="bar-chart__label">227m</span>
+                            <span class="bar-chart__label-bottom">2024</span>
+                        </div>
+                        <!-- Additional bars -->
+    
+                        <div class="bar-chart__bottom-text-container">
+                            <h3 class="bar-chart__bottom-text-header">Nigerian Population (2016–2024)</h3>
+    
+                            <p class="bar-chart__bottom-text-paragraph">
+                                The population of Nigeria has shown a steady upward trend from 2016 to 2024, growing approximately by 5-6 million people each year. Starting at about 186 million in 2016, it reached an estimated 227 million by 2024. This growth is driven by Nigeria’s high birth rate and relatively young population, positioning the country as one of the most populous nations worldwide, with significant implications for economic planning and development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+               
+            </section>
+
+            <section class="section-text-cards">
+                <div class="text-card-container">
+                    <a class="text-card" href="./about us.html">
+                        <img class="text-card__overlay-img" src="./src/elements/ARROW_PAPER PLANE.png" />
+                        <h2 class="text-card__header">Our Mission:</h2>
+                        <p class="text-card__paragraph">Is to change the world by providing support to 
+                            businesses making a profit of less than 50,000 naira a day so they 
+                            can expand their business without reliance on high-interest loans.
+                        </p>
+                    </a>
+    
+                    <a class="text-card" href= "./about us.html">
+                        <img class="text-card__overlay-img" src="./src/elements/BINOCULARS.png" />
+                        <h2 class="text-card__header">Our Vision:</h2>
+                        <p class="text-card__paragraph">Is empower micro-businesses to break the cycle of poverty 
+                            and thrive, we envision a world where entrepreneurs earning less than 
+                            50,000 naira a day have access to the resources and support they need to grow 
+                            and succeed. 
+                        </p>
+                    </a>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="footer">
+            <!--<div class="footer__item footer__item-1">
+                <h3>Get in touch</h3>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-envelope"></i>
+            </div>-->
+            
+            <div class="footer__item footer__item-2">
+                <div class="footer__item-2-item footer__item-2-item-1">
+                    <h3>Links</h3>
+                    <!--<a>Search</a>-->
+                    <a href="./about us.html">About Us</a>
+                    <a href="./donations.html">Donate</a>
+                </div>
+
+                <!--<div class="footer__item-2-item footer__item-2-item-2">
+                    <h3>Help</h3>
+                    <a>Payments</a>
+                </div>-->
+
+                <div class="footer__item-2-item footer__item-2-item-3">
+                    <h3>Home</h3>
+                    <a href="./grants page.html" class="small">Grants</a>
+                    <a href="./faq.html">FAQs</a>
+                    <!--<a class="small">Health</a>
+                    <a class="small">Education</a>-->
+                </div>
+            </div>
+
+            <!--<div class="footer__item footer__item-3">
+                <h3>Newsletter</h3>
+                <div><input placeholder="example@email.com" /></div>
+                <button class="dark-button">Subscribe</button>
+            </div>-->
+        </footer>
+    </div>
+
+</body>
+</html>
