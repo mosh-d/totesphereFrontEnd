@@ -7,7 +7,11 @@
         <title>Confirmation page</title>
 
         <link rel="stylesheet", href="./src/style.css"/>
-        <script src="./src/index.js"></script>
+        <script type="module">
+          import { toggleNav, toggle } from './src/index.js';
+          window.toggleNav = toggleNav;
+          window.toggle = toggle;
+        </script>
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

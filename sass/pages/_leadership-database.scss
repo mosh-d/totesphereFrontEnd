@@ -1,0 +1,162 @@
+.leadership-database {
+  position: relative;
+  z-index: 1;
+  
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leadership-database-sections {
+  // min-height: 100vh;
+  
+  @include respond(tab-port) {
+    margin-top: 10rem !important;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .section {
+    width: 100%;
+  }
+}
+
+.section-database--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+
+  &__heading {
+    font-size: $font-size-large-6;
+    text-align: center;
+  }
+}
+
+.database-container {
+  display: flex;
+  width: 80vw;
+  gap: 5rem;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+
+.leader-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+  width: 60%;
+
+  a {
+    display: block;
+    width: auto;
+    transition: all .1s;
+    margin-bottom: 1rem;
+    height: 4rem;
+    overflow: visible;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1) translateX(2.9rem);
+      font-weight: 700;
+      color: $color-accent;
+    }
+
+    &:active {
+      cursor: pointer;
+      transform: scale(1) translateX(0);
+      font-weight: 700;
+      color: $color-grey-darker;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__container{
+    background-color: $color-primary;
+  }
+
+  &__nav-bar {
+    list-style-type: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+  }
+
+  &__nav-item {
+    display: inline-block;
+    font-size: $default-font-size;
+    font-weight: 100;
+    // font-family: 'Lora Sans', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+    transition: all .1s;
+  }
+
+  &__nav-item:hover {
+    cursor: pointer;
+    transform: scale(1.1) rotate(5deg);
+    font-weight: 400;
+  }
+
+  &__nav-item:active {
+    transform: none;
+  }
+
+  &__nav-item--current {
+    font-weight: 700;
+  }
+
+  &__nav-item--current:hover {
+    cursor: auto;
+    transform: none;
+    font-weight: 700;
+  }
+
+  &__text {
+    background-color: $color-secondary-2-light;
+    flex: 1;
+    padding: 1.5rem;
+    font-size: $default-font-size;
+    font-weight: 100;
+    font-family: 'Lora Sans', sans-serif;
+    // font-family: 'Merriweather Sans', sans-serif;
+  }
+}
+
+#l-e-box--active {
+  flex: 1;
+
+  @include respond(tab-port) {
+    flex: none;
+    width: 50%;
+    height: 50rem;
+    gap: none;
+  }
+
+  &:hover {
+    box-shadow: none;
+    transform: none;
+    cursor: auto;
+  }
+
+  .l-e-box__text {
+    padding: 1rem;
+    justify-content: start;
+  }
+}

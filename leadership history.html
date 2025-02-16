@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Leadership History</title>
+
+    <link rel="stylesheet" , href="./src/css/style.css" />
+    <script type="module" defer>
+      import { toggleNav, toggle } from './src/index.js';
+      window.toggleNav = toggleNav;
+      window.toggle = toggle;
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="leadership-history">
+      <a href="index.html" class="top-bar__logo"></a>
+
+      <div class="b-menu-positioner">
+        <label for="navi-toggle" class="navigation__button">
+          <div class="b-menu" onclick="toggleNav('vert-nav-bar')">
+            <div class="icon"></div>
+          </div>
+        </label>
+      </div>
+
+      <nav id="vert-nav-bar" class="vert-nav-bar">
+        <ul class="vert-nav-item">
+          <li>
+            <a class="current-nav-item" href="./index.html" target="_self"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="./grants page.html" target="_self">Totesphere Grants</a>
+          </li>
+          <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                <li><a>Totesphere Education</a></li>-->
+          <li>
+            <a href="./leadership history.html" target="_self"
+              >Leadership History</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <header>
+        <div class="top-bar top-bar--light-shadow">
+          <!--<h1>Logo</h1>-->
+          <div class="top-bar__info">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <em class="top-bar__info-text">
+              This website is intended for Nigerian residents</em
+            >
+          </div>
+        </div>
+
+        <div class="nav-padder">
+          <nav class="nav-bar">
+            <ul class="nav-bar__nav-item nav-bar__nav-item--dark">
+              <li><a href="./index.html" target="_self">Home</a></li>
+              <li>
+                <a href="./grants page.html" target="_self"
+                  >Totesphere Grants</a
+                >
+              </li>
+              <!--<li><a href="./health page.html">Totesphere Health</a></li>
+                        <li><a>Totesphere Education</a></li>-->
+              <li>
+                <a
+                  class="nav-bar__current-nav-item nav-bar__current-nav-item--dark"
+                  href="./leadership history.html"
+                  target="_self"
+                  >Leadership History</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="leadership-history-sections">
+        <section class="section section-cta">
+          <div class="cta-box cta-box--1">
+            <h2  class="cta-box__text">
+              Make a donation to assist and keep Nigerian's businesses running.
+            </h2>
+            <a href="./donations.html" class="button cta-box__button button--action" id="active">Donate Now</a>
+          </div>
+          <div class="cta-box cta-box--2">
+            <h2 class="cta-box__text">Apply for grants to support your business and make it grow.</h2>
+            <a href="./grants page.html#g-c" class="button cta-box__button button--action" id="active">Apply for grant now</a>
+          </div>
+        </section>
+
+        <section class="section section-database u-margin-bottom-huge">
+          <h1 class="section-database__heading">NIGERIAN PUBLIC OFFICIALS DATABASE</h1>
+
+          <div class="search-bar">
+            <div class="search-bar__frame">
+              <label for="search"></label>
+              <input type="search" class="search-bar__input-field" id="search-bar" placeholder="Search...">
+              <a class="search-bar__button" id="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+
+            <span class="search-bar__info">Example: Presidents / Olusegun Obasango </span>
+          </div>
+
+          <div class="leadership-explore">
+            <h2>Explore All</h2>
+            <div class="explore-container">
+              <em class="hide" id="search-error">Leader not found!</em>
+
+              <a class="l-e-box l-e-box--1" data-id="17">
+              </a>
+              <a class="l-e-box l-e-box--2" data-id="16">
+              </a>
+              <a class="l-e-box l-e-box--3" data-id="15">
+              </a>
+              <a class="l-e-box l-e-box--4" data-id="14">
+              </a>
+              <a class="l-e-box l-e-box--5" data-id="13">
+              </a>
+              <a class="l-e-box l-e-box--6" data-id="12">
+              </a>
+              <a class="l-e-box l-e-box--7" data-id="11">
+              </a>
+              <a class="l-e-box l-e-box--8" data-id="10">
+              </a>
+              <a class="l-e-box l-e-box--9" data-id="9">
+              </a>
+              <a class="l-e-box l-e-box--10" data-id="8">
+              </a>
+              <a class="l-e-box l-e-box--11" data-id="7">
+              </a>
+              <a class="l-e-box l-e-box--12" data-id="6">
+              </a>
+              <a class="l-e-box l-e-box--13" data-id="5">
+              </a>
+              <a class="l-e-box l-e-box--14" data-id="4">
+              </a>
+              <a class="l-e-box l-e-box--15" data-id="3">
+              </a>
+              <a class="l-e-box l-e-box--16" data-id="2">
+              </a>
+              <a class="l-e-box l-e-box--17" data-id="1">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="section section-stories u-margin-bottom-huge"></section> -->
+      </main>
+
+      <footer class="footer">
+        <!--<div class="footer__item footer__item-1">
+                <h3>Get in touch</h3>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-envelope"></i>
+            </div>-->
+
+        <div class="footer__item footer__item-2">
+          <div class="footer__item-2-item footer__item-2-item-1">
+            <h3>Links</h3>
+            <!--<a>Search</a>-->
+            <a href="./about us.html">About Us</a>
+            <a href="./donations.html">Donate</a>
+          </div>
+
+          <!--<div class="footer__item-2-item footer__item-2-item-2">
+                    <h3>Help</h3>
+                    <a>Payments</a>
+                </div>-->
+
+          <div class="footer__item-2-item footer__item-2-item-3">
+            <h3>History</h3>
+            <a href="./index.html" class="small">Home</a>
+            <a href="./grants page.html" class="small">Grants</a>
+            <a href="./faq.html">FAQs</a>
+            <!--<a class="small">Health</a>
+                    <a class="small">Education</a>-->
+          </div>
+        </div>
+
+        <!--<div class="footer__item footer__item-3">
+                <h3>Newsletter</h3>
+                <div><input placeholder="example@email.com" /></div>
+                <button class="dark-button">Subscribe</button>
+            </div>-->
+      </footer>
+    </div>
+  </body>
+</html>

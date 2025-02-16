@@ -1,0 +1,61 @@
+.cta-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  min-width: 20rem;
+  width: 40%;
+  height: auto; // Set height to auto to hug contents
+  padding: 2rem;
+  border-radius: 1rem;
+
+  @include respond(tab-port) {
+    width: 80%;
+    padding: 8rem 4rem;
+    height: auto; // Ensure height is auto for responsive design
+  }
+
+  &__text {
+    color: #fff;
+    z-index: 3;
+    text-align: center;
+  }
+
+  &__button {
+    z-index: 3;
+  }
+}
+
+.cta-box:hover::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 10%, rgba(0, 0, 0, .4));
+}
+
+.cta-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, .2));
+  background-blend-mode: multiply;
+  z-index: 2;
+  border-radius: 1rem;
+  transition: all .2s ease-in-out;
+}
+
+.cta-box--1 {
+  position: relative;
+  background-image: url(../../src/img/pikaso_texttoimage_35mm-film-photography-A-Nigerian-market-owner-a-mi.jpeg);
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.cta-box--2 {
+  position: relative;
+  background-image: url(../../src/img/pikaso_embed.png);
+  background-size: cover;
+  z-index: 1;
+}

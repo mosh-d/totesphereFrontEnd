@@ -73,9 +73,13 @@
     width: 22rem; /* Full width */
     position: absolute;
     left: 75%;
-    top: 1rem;
+    top: -8rem;
     opacity: 0.5;
     transform: translateX(-50%); /* Center horizontally */
+
+    &--2 {
+      top: -7rem;
+    }
 
     @include respond(phone) {
         width: 20rem;

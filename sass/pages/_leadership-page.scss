@@ -1,0 +1,61 @@
+/* .leadership-history * {
+  overflow: hidden;
+} */
+
+.leadership-history {
+  position: relative;
+  z-index: 1;
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leadership-history-sections {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .section {
+    width: 100%;
+  }
+}
+
+.section-cta {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 3rem 5rem;
+  margin-bottom: 7rem;
+
+  @include respond(tab-port) {
+    padding: 10rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+  }
+}
+
+.section-database {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+
+  &__heading {
+    font-size: $font-size-large-6;
+    text-align: center;
+  }
+}
+
+.section-stories {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40rem;
+}

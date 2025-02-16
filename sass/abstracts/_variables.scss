@@ -7,6 +7,7 @@ $font-size-large-2: 2rem;
 $font-size-large-3: 2.2rem;
 $font-size-large-4: 2.4rem;
 $font-size-large-5: 3rem;
+$font-size-large-6: 6rem;
 
 //GRID
 $grid-width: 114rem;
@@ -24,9 +25,11 @@ Accent color: rgb(230, 150, 57)
 
 $color-primary: rgb(69, 154, 157);
 $color-secondary-1: rgb(59, 118, 137);
+$color-secondary-1-dark: rgb(51, 59, 61);
 $color-footer: rgba(8, 20, 24, .8);
 $color-footer-2: rgba(17, 28, 34, 0.8);
 $color-secondary-2: rgb(168, 218, 220);
+$color-secondary-2-light: rgba(168, 218, 220, 0.3);
 $color-secondary-3: rgb(29, 53, 87);
 $color-accent: rgb(230, 150, 57);
 $color-accent-bright: rgb(255, 196, 0);
@@ -35,6 +38,7 @@ $color-grey-dark: rgb(105, 105, 105);
 $color-grey-darker: rgb(73, 73, 73);
 $color-grey-light: rgb(131, 131, 131);
 $color-grey-lighter: rgb(185, 185, 185);
+$color-grey-lighter-2: rgba(8, 20, 24, 0.1);
 
 
 //SHADOWS

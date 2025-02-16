@@ -1,0 +1,138 @@
+.leadership-explore {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.explore-container {
+  width: 80vw;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 40rem;
+  gap: 5rem;
+  border-radius: 2rem;
+
+  background-color: $color-grey-lighter-2;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50rem;
+
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 60rem;
+    gap: 10rem;
+  }
+}
+
+.l-e-box {
+  // height: 30rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: box-shadow, transform .15s ease-in;
+
+  // position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#l-e-box--active {
+    // height: 30rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all .1s;
+  
+    // position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.l-e-box:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transform-origin: center;
+  box-shadow: $shadow-light;
+  border: 1px solid $color-accent-bright;
+
+  .l-e-box__image {
+    filter: grayscale(80%);
+  }
+
+  .l-e-box__text {
+    color: #fff;
+    // border-top: 2px solid #fff;
+    
+    strong,
+    em {
+      font-size: 2rem;
+    }
+
+    em {
+      color: $color-accent-bright;
+    }
+  }
+}
+
+.l-e-box:active {
+  transform: scale(.97);
+  box-shadow: none;
+}
+
+.l-e-box__image {
+  filter: grayscale(100%);
+  // background-size: cover;
+  // background-position: top; // Adjust the focal point to the top center
+  width: 100%;
+  height: 65%;
+  z-index: 1;
+
+  & > img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.l-e-box__text {
+  z-index: 2;
+  display: flex;
+  height: 35%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  color: #fff;
+  background-color: $color-secondary-1-dark;
+  gap: 1rem;
+
+ /*  em {
+    opacity: 0;
+  } */
+}
+
+.hide {
+  display: none;
+}
+
+#search-error {
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+  font-weight: 700;
+
+  grid-column: 2;
+}

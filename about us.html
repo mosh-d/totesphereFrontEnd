@@ -7,7 +7,11 @@
     <title>About us</title>
 
     <link rel="stylesheet", href="./src/css/style.css"/>
-    <script src="./src/index.js"></script>
+    <script type="module">
+      import { toggleNav, toggle } from './src/index.js';
+      window.toggleNav = toggleNav;
+      window.toggle = toggle;
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -299,7 +303,7 @@
                     </div>
                 </div>
 
-                <div class="profile-card u-margin-none">
+              <!--   <div class="profile-card u-margin-none">
                     <div class="profile-card__title">
                         <h4>Creative/Co-founder</h4>
                         <p class="profile-card__name">Marvellous Anson</p>
@@ -314,7 +318,7 @@
                             From concept to creation, she brings ideas to life through visuals that captivate and communicate effectively.
                         </p>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
         
@@ -344,8 +348,9 @@
 
                 <div class="footer__item-2-item footer__item-2-item-3">
                     <h3>About us</h3>
-                    <a href="./grants page.html" class="small">Grants</a>
                     <a href="./index.html" class="small">Home</a>
+                    <a href="./grants page.html" class="small">Grants</a>
+                    <a href="./leadership history.html" class="small">History</a>
                     <a href="./faq.html">FAQs</a>
                     <!--<a class="small">Health</a>
                     <a class="small">Education</a>-->

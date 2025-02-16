@@ -1,121 +1,255 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Get all elements with the class 'amount' inside .item-2-2
-  const amounts = document.querySelectorAll('.donations .donations-container .grid-container-2 .item-2-2 .amount');
+import { leaders } from './data.js';
 
-  // Get the input field with the class 'input-1'
-  const inputField = document.querySelector('.donations .donations-container .grid-container-2 .item-2-2 .input-1');
+// Leader about button nodes
+const aboutButton = document.getElementById('about-button');
+const cabinetButton = document.getElementById('cabinet-button');
+const allegationsButton = document.getElementById('allegations-button');
 
-  // Add an event listener to each amount element
-  amounts.forEach((amount) => {
-    amount.addEventListener('click', () => {
-      // Clear the input field
-      inputField.value = '';
+//Search bar & button nodes
+const searchBar = document.getElementById('search-bar'); 
+const searchButton = document.getElementById('search-button'); 
 
-      // Set the value of the input field to the text content of the clicked amount element
-      inputField.value = amount.textContent.trim(); // Use textContent of the .amount div
-    });
-  });
+// Leader about content box node
+const aboutContent = document.getElementById('info-box');
 
-  document.querySelector('.button.active').addEventListener('click', () => {
-    /*const inputValue = document.querySelector('.input-1'  ||  '.donation-amount').value;*/
+// To get Leader about ID from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const leaderIdCollected = urlParams.get('id');
 
-    // First, check for the element existence separately
-    const inputField = document.querySelector('.input-1');
-    const donationField = document.querySelector('.donation-amount');
+console.log("Retrieved ID from URL:", leaderIdCollected);
 
-    // Use the || to select whichever field is available
-    const inputValue = (inputField && inputField.value) || (donationField && donationField.value);
-    
-    localStorage.setItem('donationAmount', inputValue); // Store the value in localStorage
-  });
+const leadershipHistoryPage = document.querySelector('.leadership-history');
 
-  const donationAmount = localStorage.getItem('donationAmount'); // Get the stored value
-  const confirmationText = `${donationAmount}?`; // Build the confirmation message
+//Leader about button functions
+const aboutButtonHandler = () => {
+  switch (leaderIdCollected) {
+    case '1': 
+      aboutContent.innerHTML = leaders[0].info.about;
+      break;
+    case '2': 
+      aboutContent.innerHTML = leaders[1].info.about;
+      break;
+    case '3': 
+      aboutContent.innerHTML = leaders[2].info.about;
+      break;
+    case '4': 
+      aboutContent.innerHTML = leaders[3].info.about;
+      break;
+    case '5': 
+      aboutContent.innerHTML = leaders[4].info.about;
+      break;
+    case '6': 
+      aboutContent.innerHTML = leaders[5].info.about;
+      break;
+    case '7': 
+      aboutContent.innerHTML = leaders[6].info.about;
+      break;
+    case '8': 
+      aboutContent.innerHTML = leaders[7].info.about;
+      break;
+    case '9': 
+      aboutContent.innerHTML = leaders[8].info.about;
+      break;
+    case '10': 
+      aboutContent.innerHTML = leaders[9].info.about;
+      break;
+    case '11': 
+      aboutContent.innerHTML = leaders[10].info.about;
+      break;
+    case '12': 
+      aboutContent.innerHTML = leaders[11].info.about;
+      break;
+    case '13': 
+      aboutContent.innerHTML = leaders[12].info.about;
+      break;
+    case '14': 
+      aboutContent.innerHTML = leaders[13].info.about;
+      break;
+    case '15': 
+      aboutContent.innerHTML = leaders[14].info.about;
+      break;
+    case '16': 
+      aboutContent.innerHTML = leaders[15].info.about;
+      break;
+    case '17': 
+      aboutContent.innerHTML = leaders[16].info.about;
+      break;
+    default:
+      aboutContent.innerText = 'Leader not found';
+  };
 
-  // Insert the text into the <p> element inside .confirmation-box
-  document.querySelector('.confirmation-box h2').textContent = confirmationText;
+  console.log(aboutContent);
 
-   // Payment method toggling
-  const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
-  const paymentDetails = document.querySelectorAll('.payment-details');
+  // Logic for assigning --current item id to the clicked button
+  if (
+    !aboutButton.classList.contains('leader-info__nav-item--current')
+    && !cabinetButton.classList.contains('leader-info__nav-item--current')
+    && !allegationsButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    aboutButton.classList.add('leader-info__nav-item--current');
+  } else if (
+    !aboutButton.classList.contains('leader-info__nav-item--current')
+    && cabinetButton.classList.contains('leader-info__nav-item--current')
+    || allegationsButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    cabinetButton.classList.remove('leader-info__nav-item--current');
+    allegationsButton.classList.remove('leader-info__nav-item--current');
+    aboutButton.classList.add('leader-info__nav-item--current');
+  }
+}
 
-  paymentMethods.forEach((method) => {
-    method.addEventListener('change', () => {
-      paymentDetails.forEach((detail) => detail.classList.remove('active'));
-      const selectedMethod = method.value;
-      document.getElementById(`${selectedMethod}-details`).classList.add('active');
-    });
-  });
-});
+const cabinetButtonHandler = () => {
+  switch (leaderIdCollected) {
+    case '1': 
+      aboutContent.innerHTML = leaders[0].info.cabinet;
+      break;
+    case '2': 
+      aboutContent.innerHTML = leaders[1].info.cabinet;
+      break;
+    case '3': 
+      aboutContent.innerHTML = leaders[2].info.cabinet;
+      break;
+    case '4': 
+      aboutContent.innerHTML = leaders[3].info.cabinet;
+      break;
+    case '5': 
+      aboutContent.innerHTML = leaders[4].info.cabinet;
+      break;
+    case '6': 
+      aboutContent.innerHTML = leaders[5].info.cabinet;
+      break;
+    case '7': 
+      aboutContent.innerHTML = leaders[6].info.cabinet;
+      break;
+    case '8': 
+      aboutContent.innerHTML = leaders[7].info.cabinet;
+      break;
+    case '9': 
+      aboutContent.innerHTML = leaders[8].info.cabinet;
+      break;
+    case '10': 
+      aboutContent.innerHTML = leaders[9].info.cabinet;
+      break;
+    case '11': 
+      aboutContent.innerHTML = leaders[10].info.cabinet;
+      break;
+    case '12': 
+      aboutContent.innerHTML = leaders[11].info.cabinet;
+      break;
+    case '13': 
+      aboutContent.innerHTML = leaders[12].info.cabinet;
+      break;
+    case '14': 
+      aboutContent.innerHTML = leaders[13].info.cabinet;
+      break;
+    case '15': 
+      aboutContent.innerHTML = leaders[14].info.cabinet;
+      break;
+    case '16': 
+      aboutContent.innerHTML = leaders[15].info.cabinet;
+      break;
+    case '17': 
+      aboutContent.innerHTML = leaders[16].info.cabinet;
+      break;
+    default:
+      aboutContent.innerText = 'Leader not found';
+  };
 
-document.addEventListener('DOMContentLoaded', () => {
-    //Donation toggle
-    const toggle = document.querySelector('.donation-toggle');
+  // Logic for assigning --current item id to the clicked button
+  if (
+    !cabinetButton.classList.contains('leader-info__nav-item--current')
+    && !aboutButton.classList.contains('leader-info__nav-item--current')
+    && !allegationsButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    cabinetButton.classList.add('leader-info__nav-item--current');
+  } else if (
+    !cabinetButton.classList.contains('leader-info__nav-item--current')
+    && aboutButton.classList.contains('leader-info__nav-item--current')
+    || allegationsButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    allegationsButton.classList.remove('leader-info__nav-item--current');
+    aboutButton.classList.remove('leader-info__nav-item--current');
+    cabinetButton.classList.add('leader-info__nav-item--current');
+  }
+}
 
-    toggle.addEventListener('click', function() {
-      toggle.classList.toggle('left');
-    });
-});
+const allegationsButtonHandler = () => {
+  switch (leaderIdCollected) {
+    case '1': 
+      aboutContent.innerHTML = leaders[0].info.allegations;
+      break;
+    case '2': 
+      aboutContent.innerHTML = leaders[1].info.allegations;
+      break;
+    case '3': 
+      aboutContent.innerHTML = leaders[2].info.allegations;
+      break;
+    case '4': 
+      aboutContent.innerHTML = leaders[3].info.allegations;
+      break;
+    case '5': 
+      aboutContent.innerHTML = leaders[4].info.allegations;
+      break;
+    case '6': 
+      aboutContent.innerHTML = leaders[5].info.allegations;
+      break;
+    case '7': 
+      aboutContent.innerHTML = leaders[6].info.allegations;
+      break;
+    case '8': 
+      aboutContent.innerHTML = leaders[7].info.allegations;
+      break;
+    case '9': 
+      aboutContent.innerHTML = leaders[8].info.allegations;
+      break;
+    case '10': 
+      aboutContent.innerHTML = leaders[9].info.allegations;
+      break;
+    case '11': 
+      aboutContent.innerHTML = leaders[10].info.allegations;
+      break;
+    case '12': 
+      aboutContent.innerHTML = leaders[11].info.allegations;
+      break;
+    case '13': 
+      aboutContent.innerHTML = leaders[12].info.allegations;
+      break;
+    case '14': 
+      aboutContent.innerHTML = leaders[13].info.allegations;
+      break;
+    case '15': 
+      aboutContent.innerHTML = leaders[14].info.allegations;
+      break;
+    case '16': 
+      aboutContent.innerHTML = leaders[15].info.allegations;
+      break;
+    case '17': 
+      aboutContent.innerHTML = leaders[16].info.allegations;
+      break;
+    default:
+      aboutContent.innerText = 'Leader not found';
+  };
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const bMenu = document.querySelector('.b-menu');
-  const vertNavBar = document.querySelector('#vert-nav-bar');
-
-  bMenu.addEventListener('click', function() {
-    vertNavBar.classList.toggle('visible');
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Get all elements with the class 'amount' inside .item-2-2
-  const amounts = document.querySelectorAll('.donations .donations-container .grid-container-2 .item-2-2 .amount');
-
-  // Get the input field with the class 'input-1'
-  const inputField = document.querySelector('.donations .donations-container .grid-container-2 .item-2-2 .input-1');
-
-  // Add an event listener to each amount element
-  amounts.forEach((amount) => {
-    amount.addEventListener('click', () => {
-      // Clear the input field
-      inputField.value = '';
-
-      // Set the value of the input field to the text content of the clicked amount element
-      inputField.value = amount.textContent.trim(); // Use textContent of the .amount div
-    });
-  });
-});
-
-const input = document.getElementById('NIN');
-input.addEventListener('input', () => {
-  // Remove non-digit characters and limit to 5 digits
-  input.value = input.value.replace(/\D/g, '').slice(0, 11);
-});
+  // Logic for assigning --current item id to the clicked button
+  if (
+    !allegationsButton.classList.contains('leader-info__nav-item--current')
+    && !aboutButton.classList.contains('leader-info__nav-item--current')
+    && !cabinetButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    allegationsButton.classList.add('leader-info__nav-item--current');
+  } else if (
+    !allegationsButton.classList.contains('leader-info__nav-item--current')
+    && aboutButton.classList.contains('leader-info__nav-item--current')
+    || cabinetButton.classList.contains('leader-info__nav-item--current')
+  ) {
+    cabinetButton.classList.remove('leader-info__nav-item--current');
+    aboutButton.classList.remove('leader-info__nav-item--current');
+    allegationsButton.classList.add('leader-info__nav-item--current');
+  }
+}
 
 //FAQ toggle
-function toggle(faqItem) {
+export function toggle(faqItem) {
   // Select the paragraph within the clicked faq-item
   const content = faqItem.querySelector('.showHide');
   // Select the 'plus' and 'minus' icons within the clicked faq-item
@@ -129,7 +263,7 @@ function toggle(faqItem) {
 }
 
 //NAV toggle
-function toggleNav(vertNavId) {
+export function toggleNav(vertNavId) {
   //To target the vertical nav bar
   const vertNav = document.getElementById(vertNavId);
   const button = document.getElementById('changeText');
@@ -137,88 +271,84 @@ function toggleNav(vertNavId) {
   
   // Toggle visibility for vertical nav bar
   vertNav.classList.toggle('show');
-  vanish.classList.toggle('hide');
+  // vanish.classList.toggle('hide');
   
-    // Toggle the button text
+/*     // Toggle the button text
     if (button.textContent === "Read more") {
       button.textContent = "Read less";
     } else {
       button.textContent = "Read more";
-    }
+    } */
 }
 
-//Checkbox validation
-function toggleSubmitButton() {
+// Inserting content for the active Leader box
+const leaderBoxActive = document.getElementById('l-e-box--active');
+
+//Event listeners
+if(leadershipHistoryPage){
+searchButton.addEventListener('click', () => {
+  const value = searchBar.value.toLowerCase();
+  const leaderBox = document.querySelectorAll('.l-e-box');
+
+  console.log("Search Value:", value);
+
+  leaderBox.forEach((leader) => {
+    console.log("Checking Leader:", leader.name);
+
+    leader.classList.remove("hide");
+    document.getElementById('search-error').classList.add("hide");
+
+    if(!leader.innerHTML.toLowerCase().includes(value)) {
+      leader.classList.toggle("hide");
+    };
+  });
+
+  if([...leaderBox].every(leader => leader.classList.contains("hide"))) {
+      document.getElementById('search-error').classList.remove("hide");
+  }
+
+  console.log("Leader Boxes:", leaderBox);
+});
+}
+
+if (aboutButton) {
+  aboutButton.addEventListener('click', aboutButtonHandler);
+}
+
+if (cabinetButton) {
+  cabinetButton.addEventListener('click', cabinetButtonHandler);
+}
+
+if (allegationsButton) {
+  allegationsButton.addEventListener('click', allegationsButtonHandler);
+}
+
+document.querySelectorAll('.l-e-box').forEach(item => {
+  item.addEventListener('click', function () {
+    const leaderId = this.getAttribute('data-id');
+    console.log("Clicked Item ID:", leaderId);
+    
+    window.location.href = `./leadership-database.html?id=${leaderId}`;
+  });
+});
+
+// Inserting Leader info into the page
+document.querySelectorAll('.l-e-box').forEach(item => {
+  const preLeaderId = item.getAttribute('data-id');
+  // const leaderBoxText = item.querySelector('.l-e-box__text');
+  item.innerHTML = `<div class="l-e-box__image"><img src="${leaders[preLeaderId - 1].img}"></div> <div class="l-e-box__text"><strong>${leaders[preLeaderId - 1].name}</strong> <em>${leaders[preLeaderId - 1].position}</em></div>`;
+  // leaderBoxText.innerHTML = `<h4>${leaders[preLeaderId - 1].name}</h4> <p>${leaders[preLeaderId - 1].position}</p>`;
+  console.log(item.innerHTML);
+});
+
+if(leaderBoxActive){
+  leaderBoxActive.innerHTML = `<div class="l-e-box__image"><img src="${leaders[leaderIdCollected - 1].img}"></div> <div class="l-e-box__text"><strong>${leaders[leaderIdCollected - 1].name}</strong> <em>${leaders[leaderIdCollected - 1].position}</em></div>`;
+}
+
+
+/* //Checkbox validation
+export function toggleSubmitButton() {
   const checkbox = document.getElementById('myCheckbox');
   const submitButton = document.getElementById('submitButton');
   submitButton.disabled = !checkbox.checked;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*document.addEventListener('DOMContentLoaded', () => {
-  // Handle amount selection and input population
-  const amounts = document.querySelectorAll('.amount');
-  const inputField = document.querySelector('.input-1');
-
-  amounts.forEach((amount) => {
-    amount.addEventListener('click', () => {
-      inputField.value = amount.textContent.trim();
-    });
-  });
-
-  // Store the donation amount when clicking the active button
-  const activeButton = document.querySelector('.button.active');
-  if (activeButton) {
-    activeButton.addEventListener('click', () => {
-      const inputValue = inputField.value;
-      localStorage.setItem('donationAmount', inputValue);
-    });
-  }
-
-  // Display the donation amount on the confirmation page
-  const donationAmount = localStorage.getItem('donationAmount');
-  const confirmationBox = document.querySelector('.confirmation-box p');
-  if (confirmationBox && donationAmount) {
-    confirmationBox.textContent = `Are you sure you want to donate ${donationAmount}?`;
-  }
-
-  // Payment method toggling
-  const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
-  const paymentDetails = document.querySelectorAll('.payment-details');
-
-  paymentMethods.forEach((method) => {
-    method.addEventListener('change', () => {
-      paymentDetails.forEach((detail) => detail.classList.remove('active'));
-      const selectedMethod = method.value;
-      document.getElementById(`${selectedMethod}-details`).classList.add('active');
-    });
-  });
-
-  // Burger menu toggle
-  const bMenu = document.querySelector('.b-menu');
-  const vertNavBar = document.querySelector('#vert-nav-bar');
-
-  if (bMenu && vertNavBar) {
-    bMenu.addEventListener('click', function() {
-      vertNavBar.classList.toggle('visible');
-    });
-  }
-  
-  // Donation toggle switch
-  const toggle = document.querySelector('.donation-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function() {
-      toggle.classList.toggle('left');
-    });
-  }
-});*/
+}*/
