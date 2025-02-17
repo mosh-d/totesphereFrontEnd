@@ -369,6 +369,9 @@ a {
       width: 80%;
       padding: 8rem 4rem;
       height: auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .cta-box {
+      width: 95%; } }
   .cta-box__text {
     color: #fff;
     z-index: 3;
@@ -649,7 +652,10 @@ input[type="tel"]:focus {
     .explore-container {
       grid-template-columns: repeat(1, 1fr);
       grid-auto-rows: 60rem;
-      gap: 10rem; } }
+      gap: 10rem;
+      width: 100vw;
+      border-radius: 0;
+      padding: 5rem 3rem; } }
 
 .l-e-box {
   width: 100%;
@@ -667,7 +673,24 @@ input[type="tel"]:focus {
   transition: all .1s;
   display: flex;
   flex-direction: column;
-  align-items: stretch; }
+  align-items: stretch;
+  flex: 1; }
+  @media only screen and (max-width: 56.25em) {
+    #l-e-box--active {
+      flex: none;
+      width: 50%;
+      height: 50rem;
+      gap: none; } }
+  @media only screen and (max-width: 37.5em) {
+    #l-e-box--active {
+      width: 100%; } }
+  #l-e-box--active:hover {
+    box-shadow: none;
+    transform: none;
+    cursor: auto; }
+  #l-e-box--active .l-e-box__text {
+    padding: 1rem;
+    justify-content: start; }
 
 .l-e-box:hover {
   cursor: pointer;
@@ -722,7 +745,9 @@ input[type="tel"]:focus {
   text-align: center;
   color: red;
   font-weight: 700;
-  grid-column: 2; }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2rem); }
 
 .faq-item {
   width: 100%;
@@ -1197,6 +1222,9 @@ input[type="tel"]:focus {
     height: 4rem;
     border-radius: 1rem;
     overflow: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .search-bar__frame {
+        width: 95%; } }
   .search-bar__input-field {
     width: 100%;
     height: 100%;
@@ -1216,12 +1244,18 @@ input[type="tel"]:focus {
     color: #fff;
     z-index: 1;
     transition: all .2s; }
+    @media only screen and (max-width: 37.5em) {
+      .search-bar__button {
+        width: 15%; } }
     .search-bar__button:hover {
       background-color: #ffc400;
       cursor: pointer;
       width: 10%;
       color: #494949;
       box-shadow: 0 0 30px #ffc400; }
+      @media only screen and (max-width: 37.5em) {
+        .search-bar__button:hover {
+          width: 20%; } }
     .search-bar__button:active {
       background-color: #967817;
       color: #fff;
@@ -1868,6 +1902,9 @@ input[type="tel"]:focus {
   overflow: hidden;
   height: 100%;
   width: 60%; }
+  @media only screen and (max-width: 37.5em) {
+    .leader-info {
+      width: 100%; } }
   .leader-info a {
     display: block;
     width: auto;
@@ -1922,22 +1959,6 @@ input[type="tel"]:focus {
     font-weight: 100;
     font-family: 'Lora Sans', sans-serif; }
 
-#l-e-box--active {
-  flex: 1; }
-  @media only screen and (max-width: 56.25em) {
-    #l-e-box--active {
-      flex: none;
-      width: 50%;
-      height: 50rem;
-      gap: none; } }
-  #l-e-box--active:hover {
-    box-shadow: none;
-    transform: none;
-    cursor: auto; }
-  #l-e-box--active .l-e-box__text {
-    padding: 1rem;
-    justify-content: start; }
-
 /* .leadership-history * {
   overflow: hidden;
 } */
@@ -1969,6 +1990,9 @@ input[type="tel"]:focus {
       flex-direction: column;
       align-items: center;
       gap: 7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-cta {
+      padding: 7rem 2rem; } }
 
 .section-database {
   display: flex;

@@ -15,6 +15,10 @@
     border-radius: 1rem;
     overflow: hidden;
     // background-color: blue;
+
+    @include respond(phone) {
+      width: 95%;
+    }
   }
 
  /*  &__frame:has(&__button:hover) {
@@ -45,12 +49,20 @@
     z-index: 1;
     transition: all .2s;
 
+    @include respond(phone) {
+      width: 15%;
+    }
+
     &:hover  {
       background-color: $color-accent-bright;
       cursor: pointer;
       width: 10%;
       color: $color-grey-darker;
       box-shadow: 0 0 30px $color-accent-bright;
+
+      @include respond(phone) {
+        width: 20%;
+      }
     }
 
     &:active {

@@ -59,6 +59,10 @@
   height: 100%;
   width: 60%;
 
+  @include respond(phone) {
+    width: 100%;
+  }
+
   a {
     display: block;
     width: auto;
@@ -136,27 +140,5 @@
     font-weight: 100;
     font-family: 'Lora Sans', sans-serif;
     // font-family: 'Merriweather Sans', sans-serif;
-  }
-}
-
-#l-e-box--active {
-  flex: 1;
-
-  @include respond(tab-port) {
-    flex: none;
-    width: 50%;
-    height: 50rem;
-    gap: none;
-  }
-
-  &:hover {
-    box-shadow: none;
-    transform: none;
-    cursor: auto;
-  }
-
-  .l-e-box__text {
-    padding: 1rem;
-    justify-content: start;
   }
 }
